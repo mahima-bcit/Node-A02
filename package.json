@@ -1,0 +1,26 @@
+{
+  "name": "node-a01",
+  "version": "1.0.0",
+  "description": "**Node & Express + Hybrid Pages + Projects API + Client Render**  \r (Starter UI + Starter Data)",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahima-bcit/Node-A01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Node2Know-LEARN-1.0",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mahima-bcit/Node-A01/issues"
+  },
+  "homepage": "https://github.com/mahima-bcit/Node-A01#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "morgan": "^1.10.1"
+  }
+}

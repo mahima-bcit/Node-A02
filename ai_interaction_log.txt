@@ -1,0 +1,19 @@
+AI Tool(s) Used:
+- ChatGPT
+
+What I used it for:
+- Debugging small issues while wiring up Express + routers
+- Fixing API filtering and client-side rendering bugs
+- Quick checks on status codes / required responses for the rubric
+
+Specific prompts/questions I asked (at least 3):
+- "Why is npm saying Missing script: dev?"
+- "It says Cannot find module './routes/pageRouter' — what did I name wrong?"
+- "My /api/projects is returning [] — what should I check first?"
+- "Why does the Projects page stay on 'Loading projects...'?"
+
+What I changed after receiving the AI output (my own decisions):
+- Added the correct npm scripts and fixed a folder/require path mismatch for the routers.
+- Corrected my projects data filtering so the list endpoint only returns active projects.
+- Fixed small JS rendering issues so project cards and the details view show properly (including images).
+- Did my own testing in the browser to confirm all routes work and error cases show correctly.
