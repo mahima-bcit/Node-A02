@@ -8,20 +8,24 @@
 </head>
 <body>
   <header>
-    <h1>Mahima Sharma</h1>
-    <%- include("../partials/nav") %>
+    <div class="header-inner">
+      <p class="brand">Mahima Sharma</p>
+      <%- include("../partials/nav") %>
+    </div>
   </header>
 
   <main class="sidebar-layout">
-    <section>
+    <section class="detail card">
       <%- body %>
     </section>
-    <aside class="sidebar">
-      <h2>Other Projects</h2>
-      <%- include("../partials/other-projects-list", { projects: otherProjects }) %>
+
+    <aside class="sidebar card">
+      <h3>Other Projects</h3>
+      <%- include("../partials/other-projects-list", { projects: otherProjects || [] }) %>
     </aside>
   </main>
 
   <%- include("../partials/footer") %>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
