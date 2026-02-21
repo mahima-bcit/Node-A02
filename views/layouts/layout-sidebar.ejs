@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Mahima Sharma</h1>
+    <%- include("../partials/nav") %>
+  </header>
+
+  <main class="sidebar-layout">
+    <section>
+      <%- body %>
+    </section>
+    <aside class="sidebar">
+      <h2>Other Projects</h2>
+      <%- include("../partials/other-projects-list", { projects: otherProjects }) %>
+    </aside>
+  </main>
+
+  <%- include("../partials/footer") %>
+</body>
+</html>

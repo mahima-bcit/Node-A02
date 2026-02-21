@@ -1,6 +1,7 @@
-# Node A01 — Portfolio Launchpad
+# Node A02 — Portfolio Launchpad (Refactor)
 
-Node & Express + Hybrid Pages + Projects API + Client Render (Vanilla JS)
+Express app refactored from A01 to use a server-side view engine (EJS) with two layouts and required partials.
+All /api/* routes remain JSON-only.
 
 ## What this app does
 

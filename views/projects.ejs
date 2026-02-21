@@ -1,0 +1,20 @@
+<h2>Projects</h2>
+<form action="/projects" method="GET" class="project-card">
+    <label for="q">Search</label>
+    <input id="q" name="q" value="<%= q ? q : '' %>" placeholder="Try: js, react, api, css..." />
+    <button type="submit">Search</button>
+
+    <% if (q) { %>
+        <p><small class="muted">Showing results for "<%= q %>" - <a href="/projects">Clear</a></small></p>
+    <% } %>
+</form>
+
+<section id="projects-container" aria-label="Project list">
+    <% if (Array.isArray(projects) && projects.length > 0) { %>
+        <% projects.forEach(project => { %>
+            <%- include("partials/project-card", { project }) %>
+        <% }) %>
+    <% } else { %>
+        <p>No projects found.</p>
+    <% } %>
+</section>

@@ -1,0 +1,35 @@
+<article class="project-details">
+    <h2><%= project.title %></h2>
+    <p><%= project.tagline %></p>
+
+    <p><%= project.description %></p>
+
+    <% if (project.stack && project.stack.length) { %>
+        <p><strong>Stack:</strong> <%= project.stack.join(', ') %></p>
+    <% } %>
+
+    <% if (project.tags && project.tags.length) { %>
+        <p><strong>Tags:</strong> <%= project.tags.join(', ') %></p>
+    <% } %>
+
+    <% if (project.images && project.images.length) { %>
+        <h3>Images</h3>
+        <ul>
+            <% project.images.forEach(function(img) { %>
+                <figure class="project-card">
+                    <img src="<%= img.path %>" alt="<%= img.alt %>" style="max-width: 100%; height: auto;" />
+                    <figcaption class="muted"><%= img.type %></figcaption>
+                </figure>
+            <% }) %>
+        </ul>
+    <% } %>
+
+    <% if (project.dates) { %>
+        <p class="muted">
+            <small>
+                Created: <%= project.dates.created %>
+                <% if (project.dates.updated) { %> | Updated: <%= project.dates.updated %> <% } %>
+            </small>
+        </p>
+    <% } %>
+</article>

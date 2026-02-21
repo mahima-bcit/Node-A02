@@ -1,159 +1,213 @@
 img {
-    max-width: 100%;
-    height: auto;
-}   
-
-body {
-    font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  max-width: 100%;
+  height: auto;
 }
 
+/* Base */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header / Nav */
 header {
-    background: #222;
-    color: #fff;
-    padding: 1rem;
+  background: #222;
+  color: #fff;
+  padding: 1rem;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 1.5rem;
-    font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+/* Main */
 main {
-    padding: 2rem;
-    max-width: 960px;
-    margin: 0 auto;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 h1 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-/* Projects Grid */
+/* -----------------------------
+   A02 Sidebar Layout (NEW)
+   Used on /projects/:slug
+------------------------------ */
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.sidebar {
+  border-left: 1px solid #ddd;
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 760px) {
+  .sidebar-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+  }
+}
+
+/* -----------------------------
+   Projects Grid (A01 styling)
+   Make A02 projects page use:
+   <section id="projects-container">
+------------------------------ */
 #projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* A02 may use h2 in cards; support both */
+.project-card h2,
 .project-card h3 {
-    margin-top: 0;
-    color: #0066cc;
+  margin-top: 0;
+  color: #0066cc;
 }
 
+.project-card a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Tags */
 .tags {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .tag {
-    background: #f0f0f0;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    color: #555;
+  background: #f0f0f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #555;
 }
 
-/* Details View */
+/* -----------------------------
+   Project Details (A01 styling)
+   Make A02 detail page use:
+   <section id="project-details">
+------------------------------ */
 #project-details {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 2rem;
-    border-radius: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 8px;
 }
 
+/* A01 had a close button; optional/unused in A02 */
 #close-details {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
 }
 
 #close-details:hover {
-    background: #555;
+  background: #555;
 }
 
-/* Form Styles */
+/* -----------------------------
+   Forms (A01 styling)
+------------------------------ */
 .form-group {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-    font-family: inherit;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
 }
 
 button[type="submit"] {
-    background: #0066cc;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 button[type="submit"]:hover {
-    background: #004c99;
+  background: #004c99;
 }
 
 .success-message {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 1rem;
-    border: 1px solid #c3e6cb;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
 }
 
 .error-message {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 1rem;
-    border: 1px solid #f5c6cb;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
 }

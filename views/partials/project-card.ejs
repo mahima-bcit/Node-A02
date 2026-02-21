@@ -1,0 +1,10 @@
+<article class="project-card">
+    <h2>
+        <a href="/projects/<%= project.slug %>"><%= project.title %></a>
+    </h2>
+    <p><%= project.tagline %></p>
+
+    <% if (project.stack && project.stack.length) { %>
+        <small class="muted">Tech Stack: <%= project.stack.join(', ') %></small>
+    <% } %>
+</article>
