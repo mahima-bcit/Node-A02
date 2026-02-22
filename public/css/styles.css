@@ -409,7 +409,7 @@ textarea:focus {
 .skills-label {
   font-weight: 400;
   color: var(--text);
-  min-width: 100px;
+  min-width: 130px;
   flex-shrink: 0;
 }
 
@@ -674,8 +674,8 @@ textarea:focus {
    14. CONTACT FORM
    ---------------------------------------------------------- */
 .contact-card {
-  max-width: 640px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 .form-group {
