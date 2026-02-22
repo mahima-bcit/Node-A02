@@ -1,0 +1,23 @@
+<% const cover = (project.images || []).find(i => i.type === "cover"); %>
+
+<article class="project-card card">
+  <% if (cover) { %>
+    <img class="thumb" src="<%= cover.path %>" alt="<%= cover.alt %>">
+  <% } %>
+
+  <div class="body">
+    <h3>
+      <a href="/projects/<%= project.slug %>"><%= project.title %></a>
+    </h3>
+
+    <p class="meta"><%= project.tagline %></p>
+
+    <% if (project.stack && project.stack.length) { %>
+      <div class="pills" aria-label="Tech stack">
+        <% project.stack.slice(0, 6).forEach(function(s){ %>
+          <span class="pill"><%= s %></span>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+</article>

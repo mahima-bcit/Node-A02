@@ -2,159 +2,141 @@
   "projects": [
     {
       "id": "p-2001",
-      "slug": "vanilla-js-game",
-      "title": "Neon Dodger",
-      "tagline": "A fast little arcade game built with pure JavaScript.",
-      "description": "A keyboard-controlled browser game with collision detection, scoring, difficulty scaling, and a restart loop. Built without frameworks to focus on DOM, events, timing, and state.",
-      "active": true,
-      "stack": ["html", "css", "javascript"],
-      "tags": ["dom", "events", "game-loop", "state"],
+      "slug": "portfolio-launchpad",
+      "title": "Portfolio Launchpad",
+      "tagline": "Express portfolio starter with API + pages.",
+      "description": "A portfolio app built with Express, featuring semantic pages, a JSON API, and clean routing.",
+      "status": true,
+      "stack": ["node", "express", "ejs", "html", "css"],
+      "tags": ["routing", "view-engine", "templates"],
       "images": [
         {
-          "path": "/images/projects/vanilla-js-game/cover.png",
-          "alt": "Neon Dodger title screen with a glowing player icon and score panel",
+          "path": "/images/projects/portfolio-launchpad/cover.png",
+          "alt": "Portfolio Launchpad cover image",
           "type": "cover"
         },
         {
-          "path": "/images/projects/vanilla-js-game/gameplay.png",
-          "alt": "Gameplay showing obstacles, score, and remaining lives",
+          "path": "/images/projects/portfolio-launchpad/screenshot.png",
+          "alt": "Portfolio Launchpad projects page screenshot",
           "type": "screenshot"
         }
       ],
-      "dates": {
-        "created": "2025-09-18",
-        "updated": "2025-10-02"
-      }
+      "dates": { "created": "2026-01-10", "updated": "2026-02-17" }
     },
     {
       "id": "p-2002",
-      "slug": "react-movie-database",
-      "title": "ReelFinder",
-      "tagline": "Search, filter, and favorite movies in React.",
-      "description": "A React app that consumes a movie API, supports search and filters, shows detail pages, and persists favorites. Focus on components, state, routing, and async fetching.",
-      "active": true,
-      "stack": ["react", "javascript", "css", "api"],
-      "tags": ["spa", "fetch", "routing", "state"],
+      "slug": "dog-breed-website",
+      "title": "Dog Breed Website",
+      "tagline": "CRUD dog cards with image uploads.",
+      "description": "A web app that manages dog profiles (add/edit/delete) and displays them as searchable cards. Built for practicing Express routes, forms, and static assets.",
+      "status": true,
+      "stack": ["node", "express", "html", "css", "javascript"],
+      "tags": ["crud", "forms", "uploads"],
       "images": [
         {
-          "path": "/images/projects/react-movie-database/cover.png",
-          "alt": "ReelFinder home page with a movie search bar and poster grid",
+          "path": "/images/projects/dog-breed-website/cover.png",
+          "alt": "Dog Breed Website cover image",
           "type": "cover"
         },
         {
-          "path": "/images/projects/react-movie-database/details.png",
-          "alt": "Movie detail page with poster, rating, cast list, and favorite button",
+          "path": "/images/projects/dog-breed-website/screenshot.png",
+          "alt": "Dog cards grid screenshot",
           "type": "screenshot"
         }
       ],
-      "dates": {
-        "created": "2025-11-03",
-        "updated": "2025-11-14"
-      }
+      "dates": { "created": "2026-02-01", "updated": "2026-02-12" }
     },
     {
       "id": "p-2003",
-      "slug": "news-style-landing-page",
-      "title": "Daily Byte",
-      "tagline": "A responsive, news-style landing page.",
-      "description": "A layout-focused project with hero, featured stories, categories, and a responsive grid. Emphasis on typography, spacing, and mobile-first design.",
-      "active": true,
-      "stack": ["html", "css", "sass"],
-      "tags": ["responsive", "grid", "typography", "layout"],
+      "slug": "fliptech-matching-game",
+      "title": "FlipTech Matching Game",
+      "tagline": "Memory matching game with levels and timer.",
+      "description": "A JavaScript matching game featuring levels, a timer, a move counter, and a restart loop to practice state management and DOM events.",
+      "status": true,
+      "stack": ["html", "css", "javascript"],
+      "tags": ["dom", "game-loop", "state"],
       "images": [
         {
-          "path": "/images/projects/news-style-landing-page/cover.png",
-          "alt": "Daily Byte landing page with hero headline and featured stories grid",
+          "path": "/images/projects/fliptech-matching-game/cover.png",
+          "alt": "FlipTech game cover image",
           "type": "cover"
         },
         {
-          "path": "/images/projects/news-style-landing-page/mobile.png",
-          "alt": "Mobile layout showing stacked story cards and a hamburger menu",
+          "path": "/images/projects/fliptech-matching-game/screenshot.png",
+          "alt": "FlipTech gameplay screenshot",
           "type": "screenshot"
         }
       ],
-      "dates": {
-        "created": "2025-10-10",
-        "updated": "2025-10-18"
-      }
+      "dates": { "created": "2025-11-10", "updated": "2025-11-25" }
     },
     {
       "id": "p-2004",
-      "slug": "node-express-mongo-portfolio",
-      "title": "Portfolio API + Views",
-      "tagline": "A data-driven portfolio powered by Node, Express, and MongoDB.",
-      "description": "Server-rendered portfolio pages backed by MongoDB. Projects load from the database, detail pages use slugs, and an admin route supports basic CRUD for entries.",
-      "active": true,
-      "stack": ["node", "express", "mongodb", "mongoose", "ejs"],
-      "tags": ["server-rendered", "crud", "routing", "database"],
+      "slug": "weather-app-react",
+      "title": "Weather App",
+      "tagline": "React app to search and display weather.",
+      "description": "A small React app that fetches weather data and displays current conditions with a clean card layout, focusing on component structure and state handling.",
+      "status": true,
+      "stack": ["react", "vite", "javascript", "css"],
+      "tags": ["api", "components", "state"],
       "images": [
         {
-          "path": "/images/projects/node-express-mongo-portfolio/cover.png",
-          "alt": "Portfolio home showing project cards rendered from MongoDB data",
+          "path": "/images/projects/weather-app-react/cover.png",
+          "alt": "Weather App cover image",
           "type": "cover"
         },
         {
-          "path": "/images/projects/node-express-mongo-portfolio/admin.png",
-          "alt": "Admin screen with project create/edit form and validation messages",
+          "path": "/images/projects/weather-app-react/screenshot.png",
+          "alt": "Weather App results card screenshot",
           "type": "screenshot"
         }
       ],
-      "dates": {
-        "created": "2026-01-08",
-        "updated": "2026-02-01"
-      }
+      "dates": { "created": "2025-12-05", "updated": "2026-01-15" }
     },
     {
       "id": "p-2005",
-      "slug": "ecommerce-site",
-      "title": "Cartonaut",
-      "tagline": "A mini e-commerce site with cart and checkout flow.",
-      "description": "Product listing, product details, cart management, and a mock checkout. Focus on reusable UI components, state management, and basic validation.",
-      "active": false,
-      "stack": ["react", "javascript", "node", "express"],
-      "tags": ["ecommerce", "cart", "forms", "validation"],
+      "slug": "carecompass-teamyellow",
+      "title": "CareCompass",
+      "tagline": "Counsellor SaaS portal with subscriptions.",
+      "description": "Team project building a counsellor-focused SaaS portal with roles, subscriptions, and dashboards. Built with ASP.NET Core and EF Core (project write-up + architecture).",
+      "status": true,
+      "stack": ["aspnet-core", "ef-core", "sqlite", "bootstrap"],
+      "tags": ["team-project", "saas", "erd"],
       "images": [
         {
-          "path": "/images/projects/ecommerce-site/cover.png",
-          "alt": "Cartonaut product grid with filters and a cart badge in the header",
+          "path": "/images/projects/carecompass-teamyellow/cover.png",
+          "alt": "CareCompass cover image",
           "type": "cover"
         },
         {
-          "path": "/images/projects/ecommerce-site/cart.png",
-          "alt": "Cart page with line items, quantity controls, and order summary",
+          "path": "/images/projects/carecompass-teamyellow/screenshot.png",
+          "alt": "CareCompass dashboard screenshot",
           "type": "screenshot"
         }
       ],
-      "dates": {
-        "created": "2025-12-02",
-        "updated": "2025-12-16"
-      }
+      "dates": { "created": "2026-01-20", "updated": "2026-02-10" }
     },
     {
       "id": "p-2006",
-      "slug": "devops-containerized-api",
-      "title": "Containerized Notes API",
-      "tagline": "A small API shipped like a grown-up.",
-      "description": "A Node/Express REST API for notes with environment-based config and a Dockerized dev/prod setup. Built to practice deployment-thinking: ports, env vars, and repeatable builds.",
-      "active": false,
-      "stack": ["node", "express", "docker"],
-      "tags": ["rest", "containers", "env", "deployment"],
+      "slug": "web-dev-bulletin",
+      "title": "Web Dev Bulletin",
+      "tagline": "News-style landing page layout practice.",
+      "description": "A responsive news-style homepage built for layout practice, emphasizing semantic HTML, reusable sections, and clean typography.",
+      "status": true,
+      "stack": ["html", "css", "javascript"],
+      "tags": ["responsive", "layout", "semantic-html"],
       "images": [
         {
-          "path": "/images/projects/devops-containerized-api/cover.png",
-          "alt": "Terminal output showing docker compose running the API service",
+          "path": "/images/projects/web-dev-bulletin/cover.png",
+          "alt": "Web Dev Bulletin cover image",
           "type": "cover"
         },
         {
-          "path": "/images/projects/devops-containerized-api/swagger.png",
-          "alt": "API documentation page showing endpoints and example responses",
+          "path": "/images/projects/web-dev-bulletin/screenshot.png",
+          "alt": "Web Dev Bulletin homepage screenshot",
           "type": "screenshot"
         }
       ],
-      "dates": {
-        "created": "2026-01-22",
-        "updated": "2026-01-29"
-      }
+      "dates": { "created": "2026-01-28", "updated": "2026-02-05" }
     }
   ]
 }
