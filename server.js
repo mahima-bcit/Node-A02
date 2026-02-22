@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(expressLayouts);
-app.set("layout", "layouts/layout-full"); // Default layout for all views
+app.set("layout", "layouts/layout-full");
 
 // Routers
 app.use("/", pageRouter);
