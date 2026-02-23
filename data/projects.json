@@ -2,22 +2,22 @@
   "projects": [
     {
       "id": "p-2001",
-      "slug": "portfolio-launchpad",
-      "title": "Portfolio Launchpad",
-      "tagline": "Express portfolio starter with API + pages.",
-      "description": "A portfolio app built with Express, featuring semantic pages, a JSON API, and clean routing.",
+      "slug": "personal-portfolio",
+      "title": "Personal Portfolio Landing Page Launchpad",
+      "tagline": "Single-page personal portfolio landing page.",
+      "description": "A single-page personal portfolio landing page built with Tailwind, SASS, and Vite.",
       "status": true,
-      "stack": ["node", "express", "ejs", "html", "css"],
-      "tags": ["routing", "view-engine", "templates"],
+      "stack": ["tailwind", "sass", "vite", "html", "css"],
+      "tags": ["vite-project", "styling", "tailwind-sass"],
       "images": [
         {
-          "path": "/images/projects/portfolio-launchpad/cover.png",
-          "alt": "Portfolio Launchpad cover image",
+          "path": "/images/projects/personal-portfolio/cover.png",
+          "alt": "Personal Portfolio cover image",
           "type": "cover"
         },
         {
-          "path": "/images/projects/portfolio-launchpad/screenshot.png",
-          "alt": "Portfolio Launchpad projects page screenshot",
+          "path": "/images/projects/personal-portfolio/screenshot.png",
+          "alt": "Personal Portfolio projects page screenshot",
           "type": "screenshot"
         }
       ],
