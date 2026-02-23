@@ -27,7 +27,10 @@ app.use("/api", apiRouter);
 // 404 Handling
 // Unknown non-API routes
 app.use((req, res) => {
-  res.status(404).json({ error: "Not found" });
+  if (req.originalUrl.startsWith("/api")) {
+    return res.status(404).json({ error: "Not found" });
+  }
+  res.status(404).render("404", { title: "Not Found", path: req.originalUrl });
 });
 
 // Basic error handler
