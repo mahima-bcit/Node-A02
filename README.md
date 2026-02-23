@@ -5,11 +5,10 @@ All /api/* routes remain JSON-only.
 
 ## What this app does
 
-- Serves static HTML pages from `/pages` (no templating yet)
+- Renders pages server-side using EJS templates with two layouts (full and sidebar)
 - Serves static assets from `/public` (CSS/JS/images)
 - Exposes a JSON API for projects at `/api/projects`
-- Renders the projects dynamically using `fetch()` + vanilla JS
-- Handles the Contact form using client-side `fetch()` (no page reload)
+- Handles the Contact form with a standard POST (server-side redirect to success page)
 
 ---
 
@@ -36,36 +35,45 @@ Open:
 ## Project Structure
 
 ```
-/server.js
-
-/routers
-  pages.routes.js
-  api.routes.js
-  
-/pages
-  index.html
-  about.html
-  projects.html
-  contact.html
-
-/public
-  /css
-    styles.css
-  /js
-    projects.js
-    contact.js
-  /images
-    /projects
-      /<slug>
-        cover.png
-        screen.png
-
 /data
   projects.json
 
-ai-interaction-log.txt
+/public
+  /css/styles.css
+  /images
+  /images/projects/<slug>/cover.png
+  /images/projects/<slug>/screenshot.png
+  /js/main.js
+
+/src
+  /routes
+    pages.routes.js
+    api.routes.js
+  /lib
+    projects.repository.js
+
+/views
+  /layouts
+    layout-full.ejs
+    layout-sidebar.ejs
+  /partials
+    nav.ejs
+    footer.ejs
+    project-card.ejs
+    other-projects-list.ejs
+  index.ejs
+  about.ejs
+  projects.ejs
+  project-details.ejs
+  contact.ejs
+  contact-success.ejs
+  404.ejs
+  500.ejs
+
 README.md
+ai-interaction-log.txt
 package.json
+server.js
 ```
 
 ---
@@ -76,26 +84,24 @@ package.json
 
 - `GET /` → Home page
 - `GET /about` → About page
-- `GET /projects` → Projects page (client-rendered via API)
-- `GET /contact` → Contact page
+- `GET /projects` → Projects list page (supports `?q=` search query)
+- `GET /projects/:slug` → Project detail page (sidebar layout)
+- `GET /contact` → Contact form page
+- `GET /contact-success` → Contact success page
 
-**Contact (AJAX)**
+**Contact (form POST)**
 
 - `POST /contact` expects name, email, message (form-encoded)
 - Log the submission to the server console
-- Returns JSON
+- On success: redirects to `/contact-success` and renders submitted data
+- On missing fields (HTTP 400): renders and error
 
-**Success (HTTP 200):**
+**API**
 
-```json
-{ "ok": true, "message": "Thank you, NAME! We have received your message." }
-```
+- `GET /api/projects` → returns all projects as JSON
+- `GET /api/projects/:slug` → returns a single project as JSON
 
-**Missing fields (HTTP 400):**
 
-```json
-{ "ok": false, "error": "Please provide name, email, and message." }
-```
 ---
 
 ## Data Contract
